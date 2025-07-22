@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup form</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="card">
+    <div class="bank-logo">
+      <img src="/Images/hdfc bank real logo.jpg">
+    </div>
+    <h1>HDFC Bank Digital Account Opening</h1>
+    <p>Start banking in minutes - complete your application online</p>
+
+    <form id="form">
+      <!-- row-1 -->
+      <!-- Name -->
+      <div class="form-row-1">
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput" class="form-label mandatory">Username</label>
+          <input type="text" class="form-control" id="nameInput" required pattern="^[a-zA-Z]+(?:[\s'-][a-zA-Z]+)*$"
+            placeholder="Enter username">
+          <span class="error-message" id="username-error"></span>
+        </div>
+
+        <!-- Mobile number -->
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput2" class="form-label mandatory">Mobile number</label>
+          <input type="mobile" class="form-control" id="mobileInput" required pattern="^[6-9]\d{9}$"
+            placeholder="E.g. 9876543210">
+          <span class="error-message" id="mobile-error"></span>
+        </div>
+        <!-- D.O.B -->
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput" class="form-label mandatory">D.O.B</label>
+          <input type="text" class="form-control" id="dobInput" required placeholder="01/01/1999">
+          <span class="error-message" id="dob-error"></span>
+        </div>
+      </div>
+
+      <!-- Row2 -->
+
+      <!-- Email -->
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput2" class="form-label mandatory" id="email">E-mail address</label>
+          <input type="email" class="form-control" id="emailInput" required
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="johndoe@example.com">
+          <span class="error-message" id="email-id-error"></span>
+        </div>
+        <!-- Address -->
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput" class="form-label mandatory" id="address"> Residential Address</label>
+          <input type="text" class="form-control" id="addressInput" required pattern="^[a-zA-Z0-9\s, .-]{10,100}$" placeholder="Enter Address"
+            minlength="10">
+          <span class="error-message" id="address-error"></span>
+        </div>
+        <!-- City -->
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput" class="form-label mandatory" id="city">City</label>
+          <input type="text" class="form-control" id="cityInput" required placeholder="E.g. Ernakulam">
+          <span class="error-message" id="city-error"></span>
+        </div>
+      </div>
+      <!-- Row-3 -->
+      <!-- State -->
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="state" class="mandatory" id="stateInput">State</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select</option>
+            <option value="1">Andhra pradesh</option>
+            <option value="2">Bihar</option>
+            <option value="3">Gujarat</option>
+            <option value="4">Kerala</option>
+            <option value="5">Maharashtra</option>
+            <option value="6">Rajasthan</option>
+            <option value="7">Tamil Nadu</option>
+            <option value="8">Telangana</option>
+            <option value="9">Uttar Pradesh</option>
+            <option value="10">West Bengal</option>
+          </select>
+        </div>
+        <!-- Pincode -->
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput" class="form-label mandatory">Pincode</label>
+          <input type="text" class="form-control mandatory" id="pincodeInput" required pattern="^\d{6}$"
+            placeholder="E.g. 682505">
+          <span class="error-message" id="pincode-error"></span>
+        </div>
+        <!-- PAN Card -->
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput" class="form-label mandatory">PAN Card</label>
+          <input type="text" class="form-control mandatory" id="panInput" required pattern="^[A-Z]{5}\d{4}[A-Z]$"
+            placeholder="ABCDE1234F">
+          <span class="error-message" id="pan-error"></span>
+        </div>
+      </div>
+      <!-- Row-4 -->
+      <!-- Aadhar -->
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput" class="form-label mandatory">Aadhar number</label>
+          <input type="text" class="form-control" id="aadharInput" required pattern="^[2-9][0-9]{3}\s[0-9]{4}\s[0-9]{4}$"
+            placeholder="XXXX XXXX XXXX">
+          <span class="error-message" id="aadhar-error"></span>
+        </div>
+        <!-- Password -->
+        <div class="form-group col-md-4">
+          <div class="password-field">
+            <label for="formGroupExampleInput2" class="form-label mandatory" id="password">Password</label>
+            <input type="password" class="form-control" id="passwordInput" required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+              placeholder="Enter valid password"
+              onfocus="document.getElementById('passwordRules').style.display='block'"
+              onblur="document.getElementById('passwordRules').style.display='none'">
+            <div class="password-rules" id="passwordRules">
+              <p>Must include:
+              <ul>
+                <li>8+characters</li>
+                <li>1 uppercase letter</li>
+                <li>1 lowercase letter</li>
+                <li>1 number</li>
+                <li>1 special character</li>
+              </ul>
+              </p>
+            </div>
+          </div>
+          <span class="error-message" id="password-error"></span>
+        </div>
+        <!-- Confirm password -->
+        <div class="form-group col-md-4">
+          <label for="formGroupExampleInput2" class="form-label mandatory" id="confirmpassword">Confirm password</label>
+          <input type="password" class="form-control" id="confirmpasswordInput" required
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+            placeholder="Confirm password">
+          <span class="error-message" id="confirmpassword-error"></span>
+        </div>
+      </div>
+
+      <!-- Terms and condition -->
+      <div class="terms">
+        <label for="terms" class="Mandatory">Agree to terms and conditions</label>
+        <input type="checkbox" id="terms" name="terms" required>
+        <span class="error-message" id="not agreed"></span>
+        <input class="btn btn-danger" type="submit" value="Submit" id="submit">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="col-12">
+
+      </div>
+
+      <!-- Success Message -->
+      <div class="col-12">
+        <div id="success-message" class="success-message-wrapper" style="display: none;">
+          <i class="fas fa-check-circle"></i> Account created successfully!
+        </div>
+      </div>
+      <br>
+    </form>
+  </div>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="validation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+body {
+    background: linear-gradient(135deg, #004a8d, #0061a8, #0082ca);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* bank logo */
+.bank-logo {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.bank-logo img {
+    height: 60px;
+    width: auto;
+}
+/* bank logo watermark */
+.card::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url('/Images/hdfc\ bank\ real\ logo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.07;
+    z-index: 0;
+    pointer-events: none;
+}
+/* card and its title */
+.card {
+    height: 700px;
+    width: 950px;
+    margin-left: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    bottom: 25%;
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.card h1 {
+    font-size: 27px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.card p {
+    font-size: 15px;
+    margin-top: 10px;
+    color: rgb(137, 130, 130);
+    text-align: center;
+}
+/* form */
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.form-row-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-left: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 180px;
+}
+/* each input field editing */
+#nameInput {
+    width: 200px;
+}
+
+#emailInput {
+    width: 260px;
+}
+
+#address {
+    margin-left: 18px;
+}
+
+#addressInput {
+    width: 260px;
+    margin-left: 15px;
+}
+
+#city {
+    margin-left: 30px;
+}
+
+#cityInput {
+    margin-left: 25px;
+}
+#aadharInput{
+    width: 220px;
+}
+/* password */
+#password {
+    margin-left: -40px;
+}
+
+#passwordInput {
+    width: 240px;
+    margin-left: -40px;
+}
+
+#confirmpassword {
+    margin-left: -40px;
+}
+
+#confirmpasswordInput {
+    width: 240px;
+    margin-left: -40px;
+}
+.password-field{
+    position: relative;
+}
+.password-rules{
+    display: none;
+    background-color: white;
+    border: 1px solid #ddd;
+    color: red;
+    font-size: 0.875rem;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.password-rules li{
+    list-style: none;
+}
+#email {
+    margin-left: 10px;
+}
+
+/* terms */
+.terms{
+    margin-left: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #eee;
+}
+/* Submit button */
+#submit {
+    position: sticky;
+    margin-top: -10px;
+    margin-left: 400px;
+    bottom: 0;
+}
+/* error message */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    display: block;
+    font-weight: 400;
+    visibility: visible;
+    margin-left: -10px;
+}
+/* success message */
+.success-message-wrapper {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin: 10px 35px;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: none;
+    animation: fadeIn 0.9s ease-in-out;
+}
+
+.success-message-wrapper i {
+    margin-right: 8px;
+    color: #28a745;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 7;
+    }
+}
+/* Responsiveness */
+@media (max-width: 480px) {
+    .card {
+        min-height: auto;
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .bank-logo img {
+        height: 50px;
+    }
+    
+    .card h1 {
+        font-size: 20px;
+    }
+    
+    .form-control {
+        padding: 8px;
+    }
+     .terms {
+        font-size: 14px;
+    }
+    
+    #submit {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .password-rules {
+        font-size: 11px;
+        padding: 8px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
