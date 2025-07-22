@@ -1,9 +1,11 @@
 # Signup-form-validation
 
-**HDFC Bank Signup Form**
+**HDFC Bank Signup Form**:
+
 A responsive banking registration form with client-side validation, built as a class assignment to demonstrate form handling and input validation techniques.
 
-**Key Features**
+**Key Features**: 
+
 Validates all required banking information fields
 
 Checks for proper PAN and Aadhaar formats
@@ -16,7 +18,8 @@ Provides clear error messages
 
 Works on both desktop and mobile devices
 
-**Technical Implementation**
+**Technical Implementation**:
+
 HTML for form structure
 
 CSS for styling and responsive layout
@@ -27,7 +30,8 @@ Uses regular expressions (Regex) for pattern matching
 
 Implements real-time validation feedback
 
-**Files**
+**Files**:
+
 index.html - Main form document
 
 style.css - Custom styling
@@ -36,7 +40,8 @@ validation.js - Validation logic
 
 Images/ - Contains branding assets
 
-**Usage**
+**Usage**:
+
 Download all project files
 
 Open index.html in a web browser
@@ -49,7 +54,8 @@ Trying underage birth dates
 
 Submitting incomplete forms
 
-**Learning Outcomes**
+**Learning Outcomes**:
+
 This project demonstrates understanding of:
 
 Form validation best practices
